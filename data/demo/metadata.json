@@ -1,0 +1,90 @@
+{
+  "run_id": "demo",
+  "source_type": "synthetic_demo",
+  "config": {
+    "store_id": "store_01",
+    "camera_id": "camera_01",
+    "timezone": "Asia/Kolkata",
+    "gate": {
+      "axis": "y",
+      "position": 0.78,
+      "span": [
+        0.05,
+        0.95
+      ],
+      "entry_direction": -1,
+      "deadband": 0.015
+    },
+    "zones": {
+      "footwear": [
+        [
+          0.05,
+          0.12
+        ],
+        [
+          0.43,
+          0.12
+        ],
+        [
+          0.43,
+          0.62
+        ],
+        [
+          0.05,
+          0.62
+        ]
+      ],
+      "apparel": [
+        [
+          0.47,
+          0.12
+        ],
+        [
+          0.78,
+          0.12
+        ],
+        [
+          0.78,
+          0.62
+        ],
+        [
+          0.47,
+          0.62
+        ]
+      ],
+      "checkout": [
+        [
+          0.8,
+          0.15
+        ],
+        [
+          0.99,
+          0.15
+        ],
+        [
+          0.99,
+          0.72
+        ],
+        [
+          0.8,
+          0.72
+        ]
+      ]
+    },
+    "queue_zone": "checkout",
+    "lost_timeout_s": 1.0,
+    "queue_alert_count": 3,
+    "queue_alert_s": 5.0
+  },
+  "start_time": "2026-10-01T10:00:00",
+  "frame_samples": 1800,
+  "timestamp_basis": "video frame index / FPS; wall clock start supplied by user",
+  "duration_basis": "frame interval weighted; last interval requires video end",
+  "limitations": [
+    "IDs are per-video tracks, not unique customers.",
+    "Visible people and queue-zone people include staff.",
+    "Queue-zone duration is a proxy, not verified waiting time.",
+    "Camera perspective means heatmap is image-space, not floor-area density."
+  ],
+  "note": "Synthetic trajectories; not measured model performance."
+}

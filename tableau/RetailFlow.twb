@@ -1,0 +1,561 @@
+<?xml version='1.0' encoding='utf-8'?>
+<workbook source-platform="win" version="9.0" xmlns:user="http://www.tableausoftware.com/xml/user">
+  <preferences />
+  <style-theme name="clean" />
+  <datasources>
+    <datasource caption="RetailFlow minute metrics" inline="true" name="textscan.retailflow" version="9.0">
+      <connection class="textscan" directory="../data/demo" filename="minute_metrics.csv" password="" server="">
+        <relation name="minute_metrics#csv" table="[minute_metrics#csv]" type="table">
+          <columns character-set="UTF-8" header="yes" locale="en_US" separator=",">
+            <column datatype="string" name="run_id" ordinal="0" />
+            <column datatype="string" name="source_type" ordinal="1" />
+            <column datatype="string" name="store_id" ordinal="2" />
+            <column datatype="string" name="camera_id" ordinal="3" />
+            <column datatype="datetime" name="minute" ordinal="4" />
+            <column datatype="date" name="date" ordinal="5" />
+            <column datatype="integer" name="hour" ordinal="6" />
+            <column datatype="real" name="observed_seconds" ordinal="7" />
+            <column datatype="real" name="person_seconds" ordinal="8" />
+            <column datatype="real" name="queue_person_seconds" ordinal="9" />
+            <column datatype="integer" name="peak_visible" ordinal="10" />
+            <column datatype="integer" name="peak_queue" ordinal="11" />
+            <column datatype="integer" name="entries" ordinal="12" />
+            <column datatype="integer" name="exits" ordinal="13" />
+            <column datatype="integer" name="queue_alerts" ordinal="14" />
+            <column datatype="real" name="alert_seconds" ordinal="15" />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class="column">
+            <remote-name>run_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[run_id]</local-name>
+            <parent-name>[minute_metrics#csv]</parent-name>
+            <remote-alias>run_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>source_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[source_type]</local-name>
+            <parent-name>[minute_metrics#csv]</parent-name>
+            <remote-alias>source_type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>store_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[store_id]</local-name>
+            <parent-name>[minute_metrics#csv]</parent-name>
+            <remote-alias>store_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>camera_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[camera_id]</local-name>
+            <parent-name>[minute_metrics#csv]</parent-name>
+            <remote-alias>camera_id</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>minute</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[minute]</local-name>
+            <parent-name>[minute_metrics#csv]</parent-name>
+            <remote-alias>minute</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[minute_metrics#csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>hour</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[hour]</local-name>
+            <parent-name>[minute_metrics#csv]</parent-name>
+            <remote-alias>hour</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>observed_seconds</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[observed_seconds]</local-name>
+            <parent-name>[minute_metrics#csv]</parent-name>
+            <remote-alias>observed_seconds</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>person_seconds</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[person_seconds]</local-name>
+            <parent-name>[minute_metrics#csv]</parent-name>
+            <remote-alias>person_seconds</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>queue_person_seconds</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[queue_person_seconds]</local-name>
+            <parent-name>[minute_metrics#csv]</parent-name>
+            <remote-alias>queue_person_seconds</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>peak_visible</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[peak_visible]</local-name>
+            <parent-name>[minute_metrics#csv]</parent-name>
+            <remote-alias>peak_visible</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>peak_queue</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[peak_queue]</local-name>
+            <parent-name>[minute_metrics#csv]</parent-name>
+            <remote-alias>peak_queue</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>entries</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[entries]</local-name>
+            <parent-name>[minute_metrics#csv]</parent-name>
+            <remote-alias>entries</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>exits</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[exits]</local-name>
+            <parent-name>[minute_metrics#csv]</parent-name>
+            <remote-alias>exits</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>queue_alerts</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[queue_alerts]</local-name>
+            <parent-name>[minute_metrics#csv]</parent-name>
+            <remote-alias>queue_alerts</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>alert_seconds</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[alert_seconds]</local-name>
+            <parent-name>[minute_metrics#csv]</parent-name>
+            <remote-alias>alert_seconds</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled="yes" />
+      <column datatype="string" name="[run_id]" role="dimension" type="nominal" />
+      <column datatype="string" name="[source_type]" role="dimension" type="nominal" />
+      <column datatype="string" name="[store_id]" role="dimension" type="nominal" />
+      <column datatype="string" name="[camera_id]" role="dimension" type="nominal" />
+      <column datatype="datetime" name="[minute]" role="dimension" type="ordinal" />
+      <column datatype="date" name="[date]" role="dimension" type="ordinal" />
+      <column datatype="integer" name="[hour]" role="dimension" type="ordinal" />
+      <column datatype="real" name="[observed_seconds]" role="measure" type="quantitative" />
+      <column datatype="real" name="[person_seconds]" role="measure" type="quantitative" />
+      <column datatype="real" name="[queue_person_seconds]" role="measure" type="quantitative" />
+      <column datatype="integer" name="[peak_visible]" role="measure" type="quantitative" />
+      <column datatype="integer" name="[peak_queue]" role="measure" type="quantitative" />
+      <column datatype="integer" name="[entries]" role="measure" type="quantitative" />
+      <column datatype="integer" name="[exits]" role="measure" type="quantitative" />
+      <column datatype="integer" name="[queue_alerts]" role="measure" type="quantitative" />
+      <column datatype="real" name="[alert_seconds]" role="measure" type="quantitative" />
+      <column datatype="real" name="[Average Visible People]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="IF SUM([observed_seconds]) &gt; 0 THEN SUM([person_seconds])/SUM([observed_seconds]) END" />
+      </column>
+      <column datatype="real" name="[Average Queue Length]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="IF SUM([observed_seconds]) &gt; 0 THEN SUM([queue_person_seconds])/SUM([observed_seconds]) END" />
+      </column>
+      <column datatype="real" name="[Queue Alert Time Fraction]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="IF SUM([observed_seconds]) &gt; 0 THEN SUM([alert_seconds])/SUM([observed_seconds]) END" />
+      </column>
+      <column datatype="real" name="[Daily Entries LOD]" role="measure" type="quantitative">
+        <calculation class="tableau" formula="{ FIXED [store_id], [date] : SUM([entries]) }" />
+      </column>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name="Entry Crossings">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="RetailFlow minute metrics" name="textscan.retailflow" />
+          </datasources>
+          <datasource-dependencies datasource="textscan.retailflow">
+            <column datatype="string" name="[run_id]" role="dimension" type="nominal" />
+            <column datatype="string" name="[source_type]" role="dimension" type="nominal" />
+            <column datatype="string" name="[store_id]" role="dimension" type="nominal" />
+            <column datatype="string" name="[camera_id]" role="dimension" type="nominal" />
+            <column datatype="datetime" name="[minute]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[date]" role="dimension" type="ordinal" />
+            <column datatype="integer" name="[hour]" role="dimension" type="ordinal" />
+            <column datatype="real" name="[observed_seconds]" role="measure" type="quantitative" />
+            <column datatype="real" name="[person_seconds]" role="measure" type="quantitative" />
+            <column datatype="real" name="[queue_person_seconds]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[peak_visible]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[peak_queue]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[entries]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[exits]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[queue_alerts]" role="measure" type="quantitative" />
+            <column datatype="real" name="[alert_seconds]" role="measure" type="quantitative" />
+            <column datatype="real" name="[Average Visible People]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF SUM([observed_seconds]) &gt; 0 THEN SUM([person_seconds])/SUM([observed_seconds]) END" />
+            </column>
+            <column datatype="real" name="[Average Queue Length]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF SUM([observed_seconds]) &gt; 0 THEN SUM([queue_person_seconds])/SUM([observed_seconds]) END" />
+            </column>
+            <column datatype="real" name="[Queue Alert Time Fraction]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF SUM([observed_seconds]) &gt; 0 THEN SUM([alert_seconds])/SUM([observed_seconds]) END" />
+            </column>
+            <column datatype="real" name="[Daily Entries LOD]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="{ FIXED [store_id], [date] : SUM([entries]) }" />
+            </column>
+            <column-instance column="[minute]" derivation="None" name="[none:minute:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[entries]" derivation="Sum" name="[sum:entries:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Bar" />
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-color" value="#168a78" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.retailflow].[sum:entries:qk]</rows>
+        <cols>[textscan.retailflow].[none:minute:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name="Exit Crossings">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="RetailFlow minute metrics" name="textscan.retailflow" />
+          </datasources>
+          <datasource-dependencies datasource="textscan.retailflow">
+            <column datatype="string" name="[run_id]" role="dimension" type="nominal" />
+            <column datatype="string" name="[source_type]" role="dimension" type="nominal" />
+            <column datatype="string" name="[store_id]" role="dimension" type="nominal" />
+            <column datatype="string" name="[camera_id]" role="dimension" type="nominal" />
+            <column datatype="datetime" name="[minute]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[date]" role="dimension" type="ordinal" />
+            <column datatype="integer" name="[hour]" role="dimension" type="ordinal" />
+            <column datatype="real" name="[observed_seconds]" role="measure" type="quantitative" />
+            <column datatype="real" name="[person_seconds]" role="measure" type="quantitative" />
+            <column datatype="real" name="[queue_person_seconds]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[peak_visible]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[peak_queue]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[entries]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[exits]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[queue_alerts]" role="measure" type="quantitative" />
+            <column datatype="real" name="[alert_seconds]" role="measure" type="quantitative" />
+            <column datatype="real" name="[Average Visible People]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF SUM([observed_seconds]) &gt; 0 THEN SUM([person_seconds])/SUM([observed_seconds]) END" />
+            </column>
+            <column datatype="real" name="[Average Queue Length]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF SUM([observed_seconds]) &gt; 0 THEN SUM([queue_person_seconds])/SUM([observed_seconds]) END" />
+            </column>
+            <column datatype="real" name="[Queue Alert Time Fraction]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF SUM([observed_seconds]) &gt; 0 THEN SUM([alert_seconds])/SUM([observed_seconds]) END" />
+            </column>
+            <column datatype="real" name="[Daily Entries LOD]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="{ FIXED [store_id], [date] : SUM([entries]) }" />
+            </column>
+            <column-instance column="[minute]" derivation="None" name="[none:minute:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[exits]" derivation="Sum" name="[sum:exits:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Bar" />
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-color" value="#168a78" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.retailflow].[sum:exits:qk]</rows>
+        <cols>[textscan.retailflow].[none:minute:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name="Visible People">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="RetailFlow minute metrics" name="textscan.retailflow" />
+          </datasources>
+          <datasource-dependencies datasource="textscan.retailflow">
+            <column datatype="string" name="[run_id]" role="dimension" type="nominal" />
+            <column datatype="string" name="[source_type]" role="dimension" type="nominal" />
+            <column datatype="string" name="[store_id]" role="dimension" type="nominal" />
+            <column datatype="string" name="[camera_id]" role="dimension" type="nominal" />
+            <column datatype="datetime" name="[minute]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[date]" role="dimension" type="ordinal" />
+            <column datatype="integer" name="[hour]" role="dimension" type="ordinal" />
+            <column datatype="real" name="[observed_seconds]" role="measure" type="quantitative" />
+            <column datatype="real" name="[person_seconds]" role="measure" type="quantitative" />
+            <column datatype="real" name="[queue_person_seconds]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[peak_visible]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[peak_queue]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[entries]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[exits]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[queue_alerts]" role="measure" type="quantitative" />
+            <column datatype="real" name="[alert_seconds]" role="measure" type="quantitative" />
+            <column datatype="real" name="[Average Visible People]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF SUM([observed_seconds]) &gt; 0 THEN SUM([person_seconds])/SUM([observed_seconds]) END" />
+            </column>
+            <column datatype="real" name="[Average Queue Length]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF SUM([observed_seconds]) &gt; 0 THEN SUM([queue_person_seconds])/SUM([observed_seconds]) END" />
+            </column>
+            <column datatype="real" name="[Queue Alert Time Fraction]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF SUM([observed_seconds]) &gt; 0 THEN SUM([alert_seconds])/SUM([observed_seconds]) END" />
+            </column>
+            <column datatype="real" name="[Daily Entries LOD]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="{ FIXED [store_id], [date] : SUM([entries]) }" />
+            </column>
+            <column-instance column="[minute]" derivation="None" name="[none:minute:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Average Visible People]" derivation="User" name="[usr:Average Visible People:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Line" />
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-color" value="#168a78" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.retailflow].[usr:Average Visible People:qk]</rows>
+        <cols>[textscan.retailflow].[none:minute:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name="Queue Length">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="RetailFlow minute metrics" name="textscan.retailflow" />
+          </datasources>
+          <datasource-dependencies datasource="textscan.retailflow">
+            <column datatype="string" name="[run_id]" role="dimension" type="nominal" />
+            <column datatype="string" name="[source_type]" role="dimension" type="nominal" />
+            <column datatype="string" name="[store_id]" role="dimension" type="nominal" />
+            <column datatype="string" name="[camera_id]" role="dimension" type="nominal" />
+            <column datatype="datetime" name="[minute]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[date]" role="dimension" type="ordinal" />
+            <column datatype="integer" name="[hour]" role="dimension" type="ordinal" />
+            <column datatype="real" name="[observed_seconds]" role="measure" type="quantitative" />
+            <column datatype="real" name="[person_seconds]" role="measure" type="quantitative" />
+            <column datatype="real" name="[queue_person_seconds]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[peak_visible]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[peak_queue]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[entries]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[exits]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[queue_alerts]" role="measure" type="quantitative" />
+            <column datatype="real" name="[alert_seconds]" role="measure" type="quantitative" />
+            <column datatype="real" name="[Average Visible People]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF SUM([observed_seconds]) &gt; 0 THEN SUM([person_seconds])/SUM([observed_seconds]) END" />
+            </column>
+            <column datatype="real" name="[Average Queue Length]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF SUM([observed_seconds]) &gt; 0 THEN SUM([queue_person_seconds])/SUM([observed_seconds]) END" />
+            </column>
+            <column datatype="real" name="[Queue Alert Time Fraction]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF SUM([observed_seconds]) &gt; 0 THEN SUM([alert_seconds])/SUM([observed_seconds]) END" />
+            </column>
+            <column datatype="real" name="[Daily Entries LOD]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="{ FIXED [store_id], [date] : SUM([entries]) }" />
+            </column>
+            <column-instance column="[minute]" derivation="None" name="[none:minute:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[Average Queue Length]" derivation="User" name="[usr:Average Queue Length:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Line" />
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-color" value="#168a78" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.retailflow].[usr:Average Queue Length:qk]</rows>
+        <cols>[textscan.retailflow].[none:minute:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name="Queue Alerts">
+      <table>
+        <view>
+          <datasources>
+            <datasource caption="RetailFlow minute metrics" name="textscan.retailflow" />
+          </datasources>
+          <datasource-dependencies datasource="textscan.retailflow">
+            <column datatype="string" name="[run_id]" role="dimension" type="nominal" />
+            <column datatype="string" name="[source_type]" role="dimension" type="nominal" />
+            <column datatype="string" name="[store_id]" role="dimension" type="nominal" />
+            <column datatype="string" name="[camera_id]" role="dimension" type="nominal" />
+            <column datatype="datetime" name="[minute]" role="dimension" type="ordinal" />
+            <column datatype="date" name="[date]" role="dimension" type="ordinal" />
+            <column datatype="integer" name="[hour]" role="dimension" type="ordinal" />
+            <column datatype="real" name="[observed_seconds]" role="measure" type="quantitative" />
+            <column datatype="real" name="[person_seconds]" role="measure" type="quantitative" />
+            <column datatype="real" name="[queue_person_seconds]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[peak_visible]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[peak_queue]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[entries]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[exits]" role="measure" type="quantitative" />
+            <column datatype="integer" name="[queue_alerts]" role="measure" type="quantitative" />
+            <column datatype="real" name="[alert_seconds]" role="measure" type="quantitative" />
+            <column datatype="real" name="[Average Visible People]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF SUM([observed_seconds]) &gt; 0 THEN SUM([person_seconds])/SUM([observed_seconds]) END" />
+            </column>
+            <column datatype="real" name="[Average Queue Length]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF SUM([observed_seconds]) &gt; 0 THEN SUM([queue_person_seconds])/SUM([observed_seconds]) END" />
+            </column>
+            <column datatype="real" name="[Queue Alert Time Fraction]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="IF SUM([observed_seconds]) &gt; 0 THEN SUM([alert_seconds])/SUM([observed_seconds]) END" />
+            </column>
+            <column datatype="real" name="[Daily Entries LOD]" role="measure" type="quantitative">
+              <calculation class="tableau" formula="{ FIXED [store_id], [date] : SUM([entries]) }" />
+            </column>
+            <column-instance column="[minute]" derivation="None" name="[none:minute:qk]" pivot="key" type="quantitative" />
+            <column-instance column="[queue_alerts]" derivation="Sum" name="[sum:queue_alerts:qk]" pivot="key" type="quantitative" />
+          </datasource-dependencies>
+          <aggregation value="true" />
+        </view>
+        <style />
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto" />
+            </view>
+            <mark class="Bar" />
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-color" value="#168a78" />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[textscan.retailflow].[sum:queue_alerts:qk]</rows>
+        <cols>[textscan.retailflow].[none:minute:qk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name="RetailFlow - SYNTHETIC DEMO">
+      <style />
+      <size maxheight="800" maxwidth="1200" minheight="800" minwidth="1200" />
+      <zones>
+        <zone h="50000" w="50000" x="0" y="0" id="1" name="Entry Crossings" />
+        <zone h="50000" w="50000" x="50000" y="0" id="2" name="Visible People" />
+        <zone h="50000" w="50000" x="0" y="50000" id="3" name="Queue Length" />
+        <zone h="50000" w="50000" x="50000" y="50000" id="4" name="Queue Alerts" />
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor="1.0" source-height="1000">
+    <window class="worksheet" name="Entry Crossings">
+      <viewpoint name="Entry Crossings" />
+    </window>
+    <window class="worksheet" name="Exit Crossings">
+      <viewpoint name="Exit Crossings" />
+    </window>
+    <window class="worksheet" name="Visible People">
+      <viewpoint name="Visible People" />
+    </window>
+    <window class="worksheet" name="Queue Length">
+      <viewpoint name="Queue Length" />
+    </window>
+    <window class="worksheet" name="Queue Alerts">
+      <viewpoint name="Queue Alerts" />
+    </window>
+    <window class="dashboard" name="RetailFlow - SYNTHETIC DEMO" />
+  </windows>
+  <thumbnails />
+</workbook>

@@ -1,0 +1,9 @@
+# Python 3.12 recommended. Version ranges avoid unverified exact pins.
+streamlit>=1.41,<2
+pandas>=2.2,<3
+plotly>=5.24,<8
+ultralytics>=8.3,<9
+opencv-python>=4.10,<6
+numpy>=1.26,<3
+lap>=0.5.12,<0.6
+pytest>=8,<10

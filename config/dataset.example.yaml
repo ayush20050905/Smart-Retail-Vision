@@ -1,0 +1,9 @@
+# Replace path with an absolute local dataset directory.
+path: /absolute/path/to/retail_dataset
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: person
+# Labels: labels/train, labels/val, labels/test.
+# Each image has a .txt: class_id centre_x centre_y width height (normalized).
